@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import getGeocode from "../services/geocode";
+import config from "../config.json";
 
 const containerStyle = {
   height: "350px",
@@ -20,7 +21,7 @@ function Map({ mapAddress }) {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyACiT4fpeXMVUi8RsKVi5TI27s30yVh87U",
+    googleMapsApiKey: config.GoggleMapApiKey,
   });
 
   // eslint-disable-next-line

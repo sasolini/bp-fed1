@@ -1,9 +1,10 @@
 import Geocode from "react-geocode";
+import config from "../config.json";
 
 const getGeocode = async (address) => {
   let location = {};
   console.log(address);
-  Geocode.setApiKey("AIzaSyACiT4fpeXMVUi8RsKVi5TI27s30yVh87U");
+  Geocode.setApiKey(config.GoggleMapApiKey);
   // Get latitude & longitude from address.
   await Geocode.fromAddress(address).then(
     (response) => {
